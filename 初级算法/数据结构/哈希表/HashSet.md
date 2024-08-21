@@ -1,0 +1,53 @@
+哈希表适用于快速判断元素是否在集合中.
+
+哈希表将值域范围大的数字映射到哈希表中的下标.一般用取模实现.且模数一般要为大素数,离2^n尽可能远,这样发生哈希碰撞的概率比较小.
+
+```c++
+//链式寻址法
+#include <bits/stdc++.h>
+using namespace std;
+const int N = 100010,mod = 100003;
+int head[N],e[N],ne[N],idx;
+void init(){
+    memset(head,-1,sizeof head);
+}
+
+void insert(int x){
+    int k = (x%mod + mod)%mod;//获取在哈希表中的索引
+    e[idx] = x;
+    ne[idx] = head[k];
+    head[k] = idx++;
+}
+
+bool query(int x){
+    int k = (x%mod+mod)%mod;//从第k号链表开始寻找
+    for(int i = head[k]; i != -1; i = ne[i]){
+        if(e[i] == x) return true;
+    }
+    return false;
+}
+
+```
+
+```c++
+//开放寻址法:相当于每次找一个蹲位
+int N = 200003;//一般比数据范围大2~3倍,且为素数
+int ma[N];
+int null = 0x3f3f3f3f;//在数据范围中没有出现过的数
+void init(){
+    memset(ma,0x3f,sizeof ma);
+}
+int find(int x){
+    int k = (x%N+N)%N;//避免映射出负数
+    while(ma[k] != null && ma[k] != x){
+        k++;
+        if(k == N){//注意是哈希表的范围,不是输入数据的个数.
+            k = 0;
+        }
+    }
+    return k;//返回在哈希表中的索引
+}
+void insert(int x) ma[find(x)] = x;
+bool query(int x) return ma[find(x)] == x;
+```
+
