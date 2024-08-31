@@ -16,7 +16,8 @@ int head[N],e[M],ne[M],w[M],idx = 1;
 int dis[N],//所有点到虚拟源点的距离
 cnt[N];//cnt[i]表示经过多少条边更新成dis[i].
 int n,m;
-bool vi[N];
+bool entry[N];//判断当前被更新的点是否在队列中,不在队列中才加入队列,
+//不判重也可以,不存在负环的话最终一定一直更新直到队列中没有可以更新的点,p
 void add(int u,int v,int c){
     e[idx] = v,w[idx] = c,ne[idx] = head[u],head[u] = idx++;
 }
@@ -24,20 +25,20 @@ bool spfa(){
     //所有点到虚拟源点的距离为0,不需要初始化
     queue<int> q;
     for(int i = 1; i <= n; i++){
-        vi[i] = true;
+        entry[i] = true;
         q.push(i);//将所有点都加入队列中,这样能判断整个图是否存在负环.
     }
     while(q.size()){
         int u = q.front();q.pop(); 
-        vi[u] = false;//出队
+        entry[u] = false;//出队
         for(int i = head[u];i; i = ne[i]){
             if(dis[e[i]] > dis[u] + w[i]){
                 dis[e[i]] = dis[u] + w[i];
                 cnt[e[i]] = cnt[u] + 1;
                  if(cnt[u] >= n) return true; //有n条边更新,说明经过n+1个点,必然存在负环.
-                if(!vi[e[i]]){
+                if(!entry[e[i]]){
                      q.push(e[i]);
-                     vi[e[i]] = true;
+                     entry[e[i]] = true;
                 }
             }
         }
