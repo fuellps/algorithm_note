@@ -64,7 +64,7 @@ int query(int a){
             p = trie[p][!pos];//继续看下一位是否还能不同
         }
         else {
-            p = trie[p][pos];//不得
+            p = trie[p][pos];//只能保留当前位,去到与当前位置相同的e
         }
     }
     return res;
