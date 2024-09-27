@@ -26,9 +26,13 @@ $first()$ 获取有序表中的第一个元素
 
 $last()$ 获取有序表中的最后一个元素
 
-$ceiling(E\ e)$获取大于e的第一个元素, **找不到返回null**
+$ceiling(E\ e)$获取大于等于e的第一个元素, **找不到返回null**
 
-$floor(E\ e)$获取小于e的第一个元素,**找不到返回null**
+$floor(E\ e)$获取小于等于e的第一个元素,**找不到返回null**
+
+$lower(E\ e)$获取小于e的第一个元素,**找不到返回null**
+
+$higher(E\ e)$获取大于e的第一个元素,**找不到返回null**
 
 *****
 
@@ -44,9 +48,18 @@ $firstKey()$ 获取有序表中的第一个元素
 
 $lastKey()$ 获取有序表中的最后一个元素
 
-$ceilingKey(E\ e)$获取大于e的第一个元素, **找不到返回null**
+$ceilingKey(E\ e)$获取大于等于e的第一个元素, **找不到返回null**
 
-$floorKey(E\ e)$获取小于e的第一个元素,**找不到返回null**
+$floorKey(E\ e)$获取小于等于e的第一个元素,**找不到返回null**
 
 *****
 
+### 集合(位运算)相关
+
+$整数包装类.bitCount()$ 获取该集合中二进制1的个数.
+
+$32 -整数包装类.numberOfLeadingZeros()$ 获取该集合的长度
+
+$31 - 整数包装类.numberOfLeadingZeros()$ 获取该集合的最大元素
+
+$整数包装类.numberOfTrailingZeros$ 获取该整数中的最小元素.
