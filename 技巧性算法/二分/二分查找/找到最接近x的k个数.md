@@ -1,7 +1,7 @@
-给定一个非递减排列的数组,和一个数x与范围k,要找最接近x的k且最小的k个数.
+![image-20240927203014677](找到最接近x的k个数.assets/image-20240927203014677.png)给定一个非递减排列的数组,和一个数x与范围k,要找最接近x的k且最小的k个数.
 
 ```java
-public List<Integer> findKClosestElements(int[] nums,int x,int k){
+pub List<Integer> findKClosestElements(int[] nums,int x,int k){
     int l = -1, r = nums.length - k; //确定左区间的边界
     while(l + 1 < r){
         int mid = (l + r)>>> 1;
