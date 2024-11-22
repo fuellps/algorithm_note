@@ -21,7 +21,7 @@ $设状态方程为 dfs(i,j) = min(\sum_{k=1}^{n}dfs(i,k) + gird[i][j],dfs(i,j))
 ```java
 int[][] dp = new int[2][n];
 for(int k = 0;k < n; k++){
-    dp[(i+1)%n][j] = Math.min(dfs(i%n,k) + grid[i][j], dfs((i+1)%n,j)); 
+    dp[(i+1)%n][j] = Math.min(dfs((i+1)%n,j),dfs(i%n,k) + grid[i][j]); 
 }
 ```
 
@@ -125,11 +125,11 @@ $!!!到达递归的边界条件,即i=n-1,j=m-1时,返回grid[n-1][m-1],这是所
 
 
 
-$2.对于路径和被k整除问题,如果k很小的话,可用三维DP解决$
+$2.对于路径和被k整除的路径数目问题,如果k很小的话,可用三维DP解决$
 
 $方式1:定义dfs(i,j,c)表示从(i,j)出发,到达(0,0)的路径和模k的余数为c的路径数$
 
-$子问题?对于当前余数为c,需要知道从其他路径转移而来,余数为(k-c\ mod\ k(数学意义上的mod) )的结果$
+$子问题?对于当前余数为c,需要知道从其他路径转移而来,且余数为((c - grid[i])\ mod\ k(数学意义上的mod) )的结果$
 
 $由于当前状态可从上边,左边转移而来,所以当前子问题的答案为\\dfs(i,j,c)=dfs(i-1,j,k-c\ mod \ k) +dfs(i,j-1,k-c\ mod \ k)$
 
@@ -232,3 +232,33 @@ $因此可以这样定义状态方程:dfs(t,i,j)表示从(t-i,i),(t-j,j)出发,�
 $子问题? 从dfs(t-1,i,j),dfs(t-1,i-1,j),dfs(t-1,i-1,j),dfs(t-1,i-1,j-1)的最大值转移而来$
 
 $如果i==j,则加上1个格子的和,否则加上两个坐标对应的格子之和.$
+
+
+
+网格图练习习题:
+
+[1594. 矩阵的最大非负积](https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/)
+
+[1301. 最大得分的路径数目](https://leetcode.cn/problems/number-of-paths-with-max-score/) :strawberry:
+
+[2435. 矩阵中和能被 K 整除的路径](https://leetcode.cn/problems/paths-in-matrix-whose-sum-is-divisible-by-k/) :strawberry:
+
+[174. 地下城游戏](https://leetcode.cn/problems/dungeon-game/)
+
+[329. 矩阵中的最长递增路径](https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/)
+
+[2328. 网格图中递增路径的数目](https://leetcode.cn/problems/number-of-increasing-paths-in-a-grid/)
+
+[2510. 检查是否有路径经过相同数量的 0 和 1](https://leetcode.cn/problems/check-if-there-is-a-path-with-equal-number-of-0s-and-1s/)
+
+[2267. 检查是否有合法括号字符串路径](https://leetcode.cn/problems/check-if-there-is-a-valid-parentheses-string-path/)(当成dfs来做) :strawberry:
+
+[1463. 摘樱桃 II](https://leetcode.cn/problems/cherry-pickup-ii/):strawberry:
+
+[741. 摘樱桃](https://leetcode.cn/problems/cherry-pickup/)   :strawberry::strawberry:
+
+## 网格图优化DP
+
+[1289. 下降路径最小和 II](https://leetcode.cn/problems/minimum-falling-path-sum-ii/)(记录最小下标)
+
+[1937. 扣分后的最大得分](https://leetcode.cn/problems/maximum-number-of-points-with-cost/) (拆项):strawberry:

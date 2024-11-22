@@ -63,3 +63,13 @@ $32 -整数包装类.numberOfLeadingZeros()$ 获取该集合的长度
 $31 - 整数包装类.numberOfLeadingZeros()$ 获取该集合的最大元素
 
 $整数包装类.numberOfTrailingZeros$ 获取该整数中的最小元素.
+
+
+
+### Map
+
+$merge(key,value,BitFunction<T,V,R>)根据value值与旧值进行计算,并返回新的结果.如果key不存在,则插入value.$
+
+$computeIfAbsent(key,Fuction<T,V>)如果key不存在,则插入执行函数返回的值,并返回该值$
+
+$getOrDefault(key,defaultValue)如果key不存在,则返回默认值$

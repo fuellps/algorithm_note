@@ -107,3 +107,6 @@ class Solution {
 }
 ```
 
+
+
+在进行dijkstra算法后,可以在得到的距离数组进行DP.
