@@ -1,3 +1,7 @@
+[toc]
+
+
+
 # 网格图DP
 
 ## 前言
@@ -83,6 +87,35 @@ for(int i = 0;i < n; i++){ //从底到顶,一步步推到记忆化搜索要求�
     }
 }
 return dp[m];
+```
+
+
+
+#### 网格图路径
+
+以 [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)为例。动态规划求出对应的数组后只需从后往前递推即可。
+
+```python
+class Solution:
+    def minPathSum(self, grid: List[List[int]]) -> int:
+        path = []
+        dp = [[inf]*(m+1) for _ in range(n+1)]
+        for i in range(n):
+            for j in range(m):
+                if i == 0 and j == 0: dp[i+1][j+1] = grid[i][j]
+                else:
+                    dp[i+1][j+1] = min(dp[i][j+1],dp[i+1][j]) + grid[i][j]
+        i,j = n,m
+        # 注意先加答案，这样里面只需回溯到边界结束，不用在循环结束后在加上边界。
+        path.append(grid[i-1][j-1]) #从最后一项开始往前回溯
+        while i != 1 or j != 1:
+            if dp[i][j] == dp[i-1][j] + grid[i-1][j-1]:
+                i -= 1
+            else:
+                j -= 1
+            path.append(grid[i-1][j-1])
+        print(*reversed(path)) #由于是从后往前回溯，因此答案需要反转。
+        return dp[n][m]
 ```
 
 
@@ -235,7 +268,20 @@ $如果i==j,则加上1个格子的和,否则加上两个坐标对应的格子之
 
 
 
-网格图练习习题:
+### 网格图练习习题:
+
+#### 基础
+
+-  [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)
+-  [63. 不同路径 II](https://leetcode.cn/problems/unique-paths-ii/)
+-  [120. 三角形最小路径和](https://leetcode.cn/problems/triangle/)
+-   [931. 下降路径最小和](https://leetcode.cn/problems/minimum-falling-path-sum/) 1573
+-   [2684. 矩阵中移动的最大次数](https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/) 1626     类似931，但稍微特别。
+-  
+
+#### 进阶
+
+-  [3393. 统计异或值为给定值的路径数目](https://leetcode.cn/problems/count-paths-with-the-given-xor-value/) 1573  容易忽略情况 &#x1F60D; `多维`
 
 [1594. 矩阵的最大非负积](https://leetcode.cn/problems/maximum-non-negative-product-in-a-matrix/)
 
