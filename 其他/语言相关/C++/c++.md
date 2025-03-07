@@ -1,3 +1,12 @@
+### 库函数
+
+#### climits:定义了最值常量
+
+- int最大/小值：INT_MAX, INT_MIN
+- long long 最大/小值： LLONG_MAX,LLONG_MI
+
+### STL
+
 #### vector
 
 ##### Element access
