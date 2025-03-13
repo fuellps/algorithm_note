@@ -125,6 +125,12 @@ class Solution:
 
 #### 最小字典序
 
+-  [402. 移掉 K 位数字](https://leetcode.cn/problems/remove-k-digits/) ~1800
+-  [1673. 找出最具竞争力的子序列](https://leetcode.cn/problems/find-the-most-competitive-subsequence/) 1802
+
 -  [316. 去除重复字母](https://leetcode.cn/problems/remove-duplicate-letters/) 2185
 
->  [天池-03. 整理书架](https://leetcode.cn/contest/tianchi2022/problems/ev2bru/) 同316
+>  [天池-03. 整理书架](https://leetcode.cn/contest/tianchi2022/problems/ev2bru/) 同316 扩展：重复个数不超过limit个
+
+-  [321. 拼接最大数](https://leetcode.cn/problems/create-maximum-number/) 分治，如何归并使得字典序最大?
+-  [2030. 含特定字母的最小子序列](https://leetcode.cn/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/) 2562 `限制较多，必须包含letter字符至少repeatition个`
