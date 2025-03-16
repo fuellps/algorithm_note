@@ -29,7 +29,7 @@ long findKthNumber(long n,long k){
             k--;
         }
     }
-    
+    return 
 }
 ```
 
