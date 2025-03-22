@@ -1,4 +1,9 @@
+[toc]
+
+
+
 ## 模板
+
 ### 一维树状数组
 
 #### 单点修改,区间查询
@@ -303,6 +308,8 @@ int main(){
 
 ### 题目练习
 
+#### 模板
+
 - [树状数组 1：单点修改，区间查询](https://loj.ac/problem/130)
 - [树状数组 2：区间修改，单点查询](https://loj.ac/problem/131)
 - [树状数组 3：区间修改，区间查询](https://loj.ac/problem/132)
@@ -310,5 +317,10 @@ int main(){
 - [二维树状数组 2：区间修改，单点查询](https://loj.ac/problem/134)
 - [二维树状数组 3：区间修改，区间查询](https://loj.ac/problem/135)
 - [308. 二维区域和检索 - 可变](https://leetcode.cn/problems/range-sum-query-2d-mutable/) (会员题) 单点修改，子矩阵查询
-- 
+
+#### 题目
+
+> 下面习题基本都可用线段树解决。
+
+- [315. Count of Smaller Numbers After Self](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/) 逆序对 
 
