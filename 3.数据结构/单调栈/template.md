@@ -111,7 +111,7 @@ class Solution:
 
 - [962. 最大宽度坡](https://leetcode.cn/problems/maximum-width-ramp/) 1608
 - [大鱼吃小鱼](https://www.nowcoder.com/practice/77199defc4b74b24b8ebf6244e1793de)
-- 
+- [四元组问题](https://www.lanqiao.cn/courses/21968/learning/?id=1622975&compatibility=false) `判断是否满足 a<b<c<d,且nums[d] < nums[c] < nums[a] < nums[b]`  &#x1F60D;
 
 #### 矩阵
 
@@ -126,8 +126,8 @@ class Solution:
 #### 最小字典序
 
 -  [402. 移掉 K 位数字](https://leetcode.cn/problems/remove-k-digits/) ~1800
+-  https://www.luogu.com.cn/problem/P1106 同402
 -  [1673. 找出最具竞争力的子序列](https://leetcode.cn/problems/find-the-most-competitive-subsequence/) 1802
-
 -  [316. 去除重复字母](https://leetcode.cn/problems/remove-duplicate-letters/) 2185
 
 >  [天池-03. 整理书架](https://leetcode.cn/contest/tianchi2022/problems/ev2bru/) 同316 扩展：重复个数不超过limit个

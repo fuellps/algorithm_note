@@ -132,6 +132,7 @@ class Solution:
 
 -  [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)
 -  [63. 不同路径 II](https://leetcode.cn/problems/unique-paths-ii/)
+-  https://www.luogu.com.cn/problem/P1002  
 -  [120. 三角形最小路径和](https://leetcode.cn/problems/triangle/)
 -   [931. 下降路径最小和](https://leetcode.cn/problems/minimum-falling-path-sum/) 1573
 -   [2684. 矩阵中移动的最大次数](https://leetcode.cn/problems/maximum-number-of-moves-in-a-grid/) 1626     类似931，但稍微特别。
