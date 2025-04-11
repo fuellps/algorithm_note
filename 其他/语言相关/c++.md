@@ -151,3 +151,44 @@ auto init = []{
 }(); //call!
 ```
 
+### 快读 & 快写
+
+```c++
+template <typename T>
+T read(){
+    T val = 0,sgn = 1; //val绝对值，sgn符号
+    int ch = getchar();
+    for(;!isdigit(ch);ch=getchar()) //如果不是数字，那么就可能是负号
+        if(ch == '-') sgn = -sgn;//负号就更换符号
+    for(;isdigit(ch); ch = getchar()) //读入数字
+        val = val*10+ ch-'0';
+    return sgn*val;
+}
+
+template <typename T>
+void write(const T&val){
+    static char st[50];
+    auto x = val; //拷贝一份
+    bool flag = false;
+    if(x<0) flag = true,x = -x;//记录并修改为非负数
+    size_t top = 0;
+    do st[top++] = x%10,x/=10; while(x);
+    if(flag) putchar('-');
+    while(top) putchar(st[--top] + '0');
+    //putchar('\n')  //h
+}
+```
+
+使用
+
+> int n = read<int>();
+>
+> long long t = read<long long>();
+>
+> write(n);
+>
+> write(t);
+
+### 运算符
+
+1. **,** 运算符，从左往右计算，返回最右边表达式结果。

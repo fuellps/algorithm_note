@@ -323,4 +323,6 @@ int main(){
 > 下面习题基本都可用线段树解决。
 
 - [315. Count of Smaller Numbers After Self](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/) 逆序对 
+- [Luogu P1966  火柴排队](https://www.luogu.com.cn/problem/P1966) `经典习题`
+- 
 

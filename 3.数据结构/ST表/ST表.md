@@ -100,6 +100,10 @@ while(q--){
 
 ### 习题练习
 
+- [Luogu P3865 【模板】ST 表](https://www.luogu.com.cn/problem/P3865) `模板题`
+- [Luogu P1440 求m区间内的最小值](https://www.luogu.com.cn/problem/P1440) `单调队列模板题` 
+- [Luogu P1816 忠诚](https://www.luogu.com.cn/problem/P1816) `模板题`
+
 - https://www.luogu.com.cn/problem/P2880 `st表模板题.求区间最大值和最小值`
 - https://www.luogu.com.cn/problem/P1890 `区间gcd.数据量比较水.`
 

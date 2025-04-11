@@ -1,10 +1,13 @@
 ### 模板题
 
 - https://www.luogu.com.cn/problem/P2036 `子集（幂集）型枚举模板题`
-
 - https://www.luogu.com.cn/problem/P1157 `求组合模板题`
-
 - https://www.luogu.com.cn/problem/P1706 `全排列模板题`
+- 
+
+### 简单枚举练手题
+
+- [既约分数](https://www.lanqiao.cn/problems/593/learning/?page=1&first_category_id=1&name=%E6%97%A2%E7%BA%A6%E5%88%86%E6%95%B0) 
 
 ### 暴力枚举/搜索
 
@@ -54,7 +57,7 @@
 
 - https://www.luogu.com.cn/problem/P1032 	`字符串库函数练习题；注意有坑点`
 - https://www.luogu.com.cn/problem/P1019 `单词接龙，一个词前缀与龙后缀相同，但不能包含龙`
-- 
+- [212. Word Search II](https://leetcode.cn/problems/word-search-ii/) `单词搜索。字典树优化剪枝。`
 
 
 
