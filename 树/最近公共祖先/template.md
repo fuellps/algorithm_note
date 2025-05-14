@@ -7,51 +7,63 @@
   - 如果$j>0$,那么i号点的祖先就是第$fa[i][j-1]$号点的第$2^{j-1}个祖先$
 
 ```c++
-int fa[N][20]; //第二维的范围为logn取上整
-int depth[N];
-// 求深度同时预处理f[i][0]
-int dfs(u,fa){
-    fa[u][0] = f;
-    for (int v : g[u]){ //假使用vector存储邻接表
-        if (v != f){
+const int N = 1e5 + 100;
+const int M = 2e5 + 10;
+int n, m;
+using namespace std;
+using ll = long long;
+
+int h[N], e[N << 1], ne[N << 1], idx = 1; 
+int fa[20][N], depth[N];
+
+int bit_length(ll k) {
+    int res = 0;
+    while (k) {
+        res++;
+        k >>= 1;
+    }
+    return res;
+
+}
+
+
+void add(int u, int v) {
+    e[idx] = v;
+    ne[idx] = h[u];
+    h[u] = idx++;
+}
+
+
+void dfs(int u, int f) {
+    fa[0][u] = f;
+    for (int i = h[u]; i; i = ne[i]) {
+        int v = e[i];
+        if (v != f) {//当v不是u的父节点时，更新子树深度
             depth[v] = depth[u] + 1;
-            dfs(v,u);          
+            dfs(v, u);
         }
     }
 }
 
-//倍增预处理祖先
-for(int j = 1; 1<< j <= n; j++){
-    for(int i = 1; i <= n; i++){
-        fa[i][j] = fa[fa[i][j-1]][j-1];
+int lca(int x, int y) {
+    if (depth[x] < depth[y]) swap(x, y); //让x为更深的点
+    int diff = depth[x] - depth[y];
+    for (int i = 0; diff; i++, diff >>= 1) {//二进制分解往上跳，使得x和y等高。
+        if (diff & 1) {
+            x = fa[i][x];
+        }
     }
+    if (x == y) return x;//已经za
+    for (int i = m - 1; i >= 0; i--) {
+        if (fa[i][x] != fa[i][y]) {//从高处跳，只要不是同一个祖先,就跳.
+            x = fa[i][x];
+            y = fa[i][y];
+        }
+    }
+    return fa[0][x];//最后再跳一步一定为最近公共祖先
 }
 
-while (q--){ #假使q组询问x,y的最近公共祖先
-   cin >> x >> y;
-   if(depth[x] > depth[y]) swap(x,y);
-   int diff = depth[y] - depth[x];
-   // 2进制分解,加速向上跳
-   for(int i = 0;1<<i <= diff; i++){
-       if(diff>>i&1){
-           y = fa[y][i];
-       }
-   }
-    // 向上跳完和x同一深度,x为最近公共祖先
-   if(y == x){ 
-       cout << x << endl;
-       continue;
-   }
-  //查找最近公共祖先
-   for(int i = 20; i >= 0;i--){
-       if(fa[x][i] != fa[y][i]){
-           x = fa[x][i];
-           y = fa[y][i];
-       }
-   }
-   cout << fa[x][0] << end
-            
-}
+
 ```
 
 

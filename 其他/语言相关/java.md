@@ -90,12 +90,53 @@ static void solve() {
 
 ## API
 
+### 自定义类去重
+
+```java
+class Point{
+    int x,y;
+    Point(){}
+    Point(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(!(o instanceof Point)) return false;
+        Point p = (Point)o;
+        return x == p.x && y == p.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString(){
+        return "(" + x + ", " + y + ")";
+    }
+}
+```
+
+- 需要重写equals方法和hashCode方法，不然的话 **比较的是对象地址**，不是对象内容
+
 ### ArrayList
 
 ```java
-List<Integer> a = new ArrayList<>(); //初始化空列表
-List<Integer> a = new ArrayList<>(30); //初始化长度为30,注意是容量，列表大小仍然为0
-List<Integer> a = new ArrayList<>(b); //y
+ArrayList<Integer> list = new ArrayList<>();
+for(int i =0;i < 10; i++) list.add(i);
+System.out.println(list);//[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+ArrayList<Integer> sub = new ArrayList<>();
+for(int i = 10;i < 15; i++) sub.add(i);
+//在下标为0的位置插入子列表
+list.addAll(0,sub);
+System.out.println(list);//[10, 11, 12, 13, 14, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+//删除5，15这一段子列表
+list.subList(5,15).clear();
+System.out.println(list);//[10, 11, 12, 13, 14]
 ```
 
 
@@ -153,6 +194,10 @@ $lastKey()$ 获取有序表中的最后一个元素
 $ceilingKey(E\ e)$获取大于等于e的第一个元素, **找不到返回null**
 
 $floorKey(E\ e)$获取小于等于e的第一个元素,**找不到返回null**
+
+$lowerKey(E\ e)$获取小于e的第一个元素,**找不到返回null**
+
+$higherKey(E\ e)$获取大于e的第一个元素,**找不到返回null**
 
 *****
 

@@ -86,13 +86,20 @@ struct DSU{
 
 ### 习题练习
 
-##### 模板题
+##### 经典题
 
-- https://www.luogu.com.cn/problem/P1551 `模板题`
-- https://www.luogu.com.cn/problem/P2078 `模板题,有一个集合全是负数`
+- [P1551 亲戚](https://www.luogu.com.cn/problem/P1551) `模板题`
+- [P2078 朋友](https://www.luogu.com.cn/problem/P2078) `模板题,有一个集合全是负数`
 - https://www.luogu.com.cn/problem/P2256 `模板题。改为字符串作为元素`
-- https://www.luogu.com.cn/problem/P1111 `建路，求连通的最快时间。`
-- https://www.luogu.com.cn/problem/P1536 `建路。求连通块数`
+- [P1111 修复公路](https://www.luogu.com.cn/problem/P1111) `建路，每条边有边权，求连通的最快时间。`
+- [P1536 村村通 ](https://www.luogu.com.cn/problem/P1536) `建路。求使图中连通的最少边数`
+- [P1195 口袋的天空](https://www.luogu.com.cn/problem/P1195) `求使图中成为k连通块的最少代价`
+- [P2814 家谱](https://www.luogu.com.cn/problem/P2814) `字符串类型的并查集模板题`
+- [P1455 搭配购买](https://www.luogu.com.cn/problem/P1455) `与01背包模板结合`
+- [P1396 营救](https://www.luogu.com.cn/problem/P1396) `从s到t的最大值路径最大边权最小`
+- [P1991 无线通讯网 ](https://www.luogu.com.cn/problem/P1991) `并查集应用题，有m个点之间边权为0，其他点边权为距离，求连通的最大距离的最小值`
+- [P4047 部落划分 ](https://www.luogu.com.cn/problem/P4047) `很好的练习题`
+- [P1967 货车运输 ](https://www.luogu.com.cn/problem/P1967) `给定m组询问，从a到b的最大边权的最小值,很好的习题`
 - 
 
 ##### 简单应用题
@@ -100,10 +107,9 @@ struct DSU{
 - [3493. 属性图](https://leetcode.cn/problems/properties-graph/) ~1600 `给定n个集合，若i!=j,且第i个集合与第j个集合共同出现的不同元素>=k,则将集合i,j合并，求最后图中的连通块`
 -  [990. 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/) 1638 `等号具有传递性，则相当于连通块.`
 -  [721. 账户合并](https://leetcode.cn/problems/accounts-merge/) `很好的一道练习Coding题`
-- https://www.luogu.com.cn/problem/P1455 `裸的01背包+裸并查集`
 - https://www.luogu.com.cn/problem/P3958 `数学+并查集，圆的关系`
 
-
+- 
 
 #### 进阶
 

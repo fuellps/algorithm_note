@@ -43,8 +43,9 @@
 
 - https://www.luogu.com.cn/problem/P1149 `根据火柴计算A+B=C的方案数`
 - https://www.luogu.com.cn/problem/P3799 `给定n个木棒，求选出4个木棒组成正方形的方案数.`
-
 - [笨笨的机器人](https://www.lanqiao.cn/problems/3262/learning/?page=1&first_category_id=1&name=%E7%AC%A8%E7%AC%A8%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA) `机器人只要走7步就回到原点.求机器人回到原点的概率.` `注意精度问题.`
+- [取数游戏](https://www.luogu.com.cn/problem/P1123)
+- 
 
 ###### 分解子问题
 
@@ -73,6 +74,7 @@
 #### 优化的枚举
 
 - [最大通过数](https://www.lanqiao.cn/problems/3346/learning/?page=1&first_category_id=1&name=%E6%9C%80%E5%A4%A7%E9%80%9A%E8%BF%87%E6%95%B0) `给定数组a,b,求两个数组前缀和<=k的最大长度之和。`
+- [P2105 K皇后](https://www.luogu.com.cn/problem/P2105) `很好的习题`
 - [大石头的搬运工](https://www.lanqiao.cn/problems/3829/learning/?page=1&first_category_id=1&name=%E5%A4%A7%E7%9F%B3%E5%A4%B4%E7%9A%84) `n堆石头，有重量和位置。移动n-1轮，求最小移动代价。`  `前后缀分解 or 拆项 ` &#x1F60D;
 - [最大子数组](https://www.lanqiao.cn/problems/3260/learning/?page=1&first_category_id=1&name=%E6%9C%80%E5%A4%A7%E6%95%B0%E7%BB%84) `不能贪心,每次删除最大1个数或者山吹最小的两个数，执行k次，求数组最大和。`  &#x1F60D;
 - [四元组问题](https://www.lanqiao.cn/courses/21968/learning/?id=1622975&compatibility=false) `判断是否满足 a<b<c<d,且nums[d] < nums[c] < nums[a] < nums[b]`  `课程`&#x1F60D;
@@ -87,6 +89,8 @@
 - [仙境诅咒](https://www.lanqiao.cn/problems/3935/learning/?page=1&first_category_id=1&name=%E4%BB%99%E5%A2%83%E8%AF%85%E5%92%92) `抽象成图问题`
 - [混沌之地](https://www.lanqiao.cn/problems/3817/learning/?page=1&first_category_id=1&name=%E6%B7%B7%E5%A2%83%E4%B9%8B%E5%9C%B0) `网格图判断路径是否存在.多了一个条件,可以破坏一个障碍物.`
 - [混沌之地5](https://www.lanqiao.cn/problems/3820/learning/?page=1&first_category_id=1&name=%E6%B7%B7%E5%A2%83%E4%B9%8B%E5%9C%B0) `同上一题,修改了相应条件.`
+- [01迷宫](https://www.luogu.com.cn/problem/P1141) `网格图搜索`
+- 
 
 
 
@@ -125,7 +129,6 @@ https://codeforces.com/problemset/problem/681/B 1300
 - [1. 两数之和](https://leetcode.cn/problems/two-sum/)
   
   - https://codeforces.com/problemset/problem/702/B
-  
 - [1512. 好数对的数目](https://leetcode.cn/problems/number-of-good-pairs/) 1161 经典题
   
     - https://leetcode.cn/problems/sum-of-digit-differences-of-all-pairs/
@@ -134,12 +137,14 @@ https://codeforces.com/problemset/problem/681/B 1300
       https://codeforces.com/problemset/problem/1420/B 1200
       https://codeforces.com/problemset/problem/318/B 1300 子串
     
-    #### 枚举右，维护左：需要维护两种值（pair）&#x1F60D;
-    
-    https://codeforces.com/problemset/problem/1931/D 1300  同余原理&#x1F60D;
-    https://leetcode.cn/problems/count-beautiful-substrings-ii/ 2445
+ - [“非常男女”计划](https://www.luogu.com.cn/problem/P1114)
+ - 
+  #### 枚举右，维护左：需要维护两种值（pair）&#x1F60D;
 
+  https://codeforces.com/problemset/problem/1931/D 1300  同余原理&#x1F60D;
+  https://leetcode.cn/problems/count-beautiful-substrings-ii/ 2445
 
+- [Counting Pairs](https://codeforces.com/problemset/problem/2051/D) `经典的题改造`
 
 哈希表
 - [2260. 必须拿起的最小连续卡牌数](https://leetcode.cn/problems/minimum-consecutive-cards-to-pick-up/) 1365
@@ -159,3 +164,7 @@ https://codeforces.com/problemset/problem/466/C
    - 变形：乘积可以被 k 整除
    
      
+
+### 余数
+
+- [2050C - Uninteresting Number](https://codeforces.com/problemset/problem/2050/C) `很好的习题`

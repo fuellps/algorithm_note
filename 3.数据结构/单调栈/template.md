@@ -113,10 +113,11 @@ class Solution:
 - [大鱼吃小鱼](https://www.nowcoder.com/practice/77199defc4b74b24b8ebf6244e1793de)
 - [四元组问题](https://www.lanqiao.cn/courses/21968/learning/?id=1622975&compatibility=false) `判断是否满足 a<b<c<d,且nums[d] < nums[c] < nums[a] < nums[b]`  &#x1F60D;
 
-#### 矩阵
+#### 矩形
 
 - [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/) 经典题
 - [85. 最大矩形](https://leetcode.cn/problems/maximal-rectangle/)
+- [Bargaining Table](https://vjudge.net/problem/CodeForces-22B) `变形，最大全0周长`
 - [1504. 统计全 1 子矩形](https://leetcode.cn/problems/count-submatrices-with-all-ones/)
 
 #### 贡献法

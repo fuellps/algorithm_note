@@ -1,1 +1,0 @@
-- [版本分支](https://www.lanqiao.cn/problems/223/learning/?page=1&first_category_id=1&problem_id=223) 阉割版
